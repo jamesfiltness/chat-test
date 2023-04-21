@@ -1,0 +1,21 @@
+<!doctype html><html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Chat Widget Demo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  </head>
+  <body>
+  <script>
+  window.DG_CHAT_WIDGET_CONFIG = {
+    widgetId: '7af3321f-6ddc-4460-aebc-8a6e9374f2c1',
+    flowUrl: 'https://flow-server.us.dgdeepai.com',
+    callbacks: {
+      onChatInitialised: () => {console.log('launched')},
+      onServerStateRetrieved: (chatState) => {console.log('chat state in callback', chatState); }
+    }
+  }
+  </script>
+  <script src="https://chat-assets.digitalgenius.com/dgchatinit.widget.v1.1.0.min.js"></script>
+  <script>window.dgchat.init()</script>
+</body>
+</html>
